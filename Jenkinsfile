@@ -1,5 +1,8 @@
-node{
- stage('SCM checkout'){
-   git 'https://github.com/gangadhar29/maven.git'
- }
+pipeline {
+    agent any
+ stages {
+     stage('scmcheckout'){
+           git branch: 'dev', url: 'https://github.com/gangadhar29/maven.git'
+       }
+  }
 }
